@@ -1,0 +1,214 @@
+/* 最一般规则 body，所有元素继承，全局reset样式 ，链接  标题   其他元素 */
+a:link,a:visited{
+    font-weight: bold;
+    color: white;
+    text-align:center;
+    padding: 4px；
+}
+a:hover,a:active{
+ background: linear-gradient(to right,rgb(108, 0, 250),rgb(216, 211, 211));
+}
+.nav>li>a{
+    padding: 5px 15px;
+}
+ /* 当li中a 被浏览过会显示已浏览过的样式 */
+li,li a{
+    background: linear-gradient(to right,rgb(108, 0, 250),rgb(255,255,255));
+}
+
+/* 更特殊的，辅助样式     表单  通知和错误   一致的条目 */
+.col-md-2{
+    padding: 0;
+}
+.xianshi1{
+  background: linear-gradient(to right,rgb(108, 0, 250),rgb(226, 114, 114)) !important;
+}
+/* 页面结构  标题，页脚  导航  布局  其他页面结构元素*/
+body{
+    background-color: #888;
+    position: relative;
+}
+.head{
+  background-color: rgb(108, 0, 250);
+  width: 100%;
+  min-height: 94px;
+  text-align: center;
+  box-shadow: 0px 6px 5px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 999;
+}
+.yincang{
+    min-height:90px;
+    color: rgb(170,170,170);
+    margin-bottom: 30px;
+}
+.article{
+  margin:0 auto; 
+    max-width: 1100px;
+    min-height: 400px;
+    padding-bottom: 20px;
+   color: rgb(255, 255, 255);
+     background-color: rgb(170,170,170);
+     font-size: 20px;
+}
+
+ h1{
+    display: block;
+    margin: 0 auto;
+    padding: 25px;
+    width: 100%;
+    color: #ffffff;
+}
+.container{
+    width: 100%;
+    padding-right: 0;
+}
+.article p{
+    float: left;
+    margin: 50px;
+}
+.art-left span{
+    width: 100%;
+    margin: 0 40px 20px auto;
+}
+.art-left a{
+    display: block;
+    width: 6.6em;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #66a300;
+    background-color: #8cca12;
+    color: #fff;
+}
+#portfolio{
+  background-color: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+ 
+}
+#portfolio h1,#CONTACT-ME h1{
+color: #999;
+text-align: center;
+padding: 45px;
+}
+#CONTACT-ME{
+  background-color: #fff;
+  max-width: 1102px;
+  margin: 0 auto;
+  border: solid 1px #999;
+}
+form{
+ margin: 0 60px;
+ padding: 30px;
+}
+form input,textarea{
+  line-height: 60px;
+  font-size: 30px;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: solid 2px #999;
+}
+textarea{
+  height: 400px;
+  width: 369px;
+}
+.footer{
+  text-align: center;
+  height: 150px;
+  width: 100%;
+  background: rgb(170,170,170);
+
+  color: #fff;
+}
+h2{
+  margin-top: 0px;
+  padding: 30px;
+  color: #fff;
+}
+
+/* 页面组件   各个页面 */
+.lg{
+    float: left;
+  
+}
+.art-left{  
+   
+    text-align:right;
+}
+.star-bright{
+      margin: 40px 40px 30px auto;
+      padding: 0;
+      width: 80%;
+      max-width: 512px;
+      border: 0;
+      border-top: solid 5px;
+      border-color: #fff;
+}
+.star-dark{
+  margin: 0  auto;
+  padding: 45px;
+  width: 80%;
+  max-width: 512px;
+  border: 0;
+  border-top: solid 5px;
+  border-color:rgb(170,170,170);
+}
+/* 覆盖   例外 */
+acronym[title]{
+    border-bottom: 1px dotted #999;
+}
+acronym[title]:hover,acronym[title]:focus {
+    cursor:help;
+} 
+/* .box{
+    border-image: url(/daohang.png)
+} */
+img{
+    margin-top: 30px;
+    width: 100px;
+    height: 100%;
+}
+@media (max-width: 1060px) {
+    .navbar-header {
+      float: none;
+    }
+    .navbar-toggle {
+      display: block;
+    }
+    .navbar-collapse.collapse {
+      display: none !important;
+    }
+    .navbar-nav {
+      margin-top: 0;
+    }
+    .navbar-nav > li {
+      float: none;
+    }
+    .navbar-nav > li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .navbar-text {
+      float: none;
+      margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+      display: block !important;
+    }
+    .collapsing {
+      overflow: hidden !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    .art-left {
+        text-align: center;
+    }
+    .star-bright{
+        margin: 30px auto;
+    }
+
+  }

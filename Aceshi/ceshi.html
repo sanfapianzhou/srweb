@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="译者：王赛 <wangsai@bootcss.com>">
+
+<title>
+  
+    Bootstrap 中文文档 &middot; Bootstrap 是世界上最流行的、移动设备优先的、响应式前端开发框架。
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/ceshi.css">
+
+
+
+<!-- Documentation extras -->
+
+<link href="/docs.min.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+<!-- <link rel="icon" href="/favicon.ico"> -->
+
+<!-- Analytics
+================================================== -->
+
+
+  </head>
+  <body><div id="nav">
+          <a id="a11" href="#a1" class="c">书籍目录</a>
+          <a id="a22" href="#a2">作品试读</a>
+          <a id="a33" href="#a3">购买须知</a>
+          <a id="a44" href="#a4">注意事项</a>
+          <a id="a55" href="#a5">用户点评</a>
+          </div>
+          <br /><br />
+          页面结构如下：
+          <div id="a1"><div style="height:500px ">ceshi</div></div>
+          <div id="a2"><div style="height:500px ">ceshi</div></div>
+          <div id="a3"><div style="height:500px ">ceshi</div></div>
+          <div id="a4"><div style="height:500px ">ceshi</div></div>
+          <div id="a5"><div style="height:500px ">ceshi</div></div>
+
+
+    <!-- Footer
+================================================== -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>
+$(function(){
+var toTopHeight = $("#nav").offset().top;
+$(window).scroll(function() {
+if( $(document).scrollTop() > toTopHeight ){
+if ('undefined' == typeof(document.body.style.maxHeight)) {
+var scrollTop = $(document).scrollTop();
+$("#nav").css({'position':'absolute','top':scrollTop+'px'});
+}else{
+$("#nav").addClass("nav_fixed");
+}
+}else{
+if ('undefined' == typeof(document.body.style.maxHeight)) {
+$("#nav").css({'position':'absolute','top':toTopHeight+'px'});
+}else{
+$("#nav").removeClass("nav_fixed");
+}
+}
+});
+
+});
+$(function(){
+	
+  $(window).scroll(function(){
+  //为页面添加页面滚动监听事件
+             var wst =  $(window).scrollTop() //滚动条距离顶端值
+    for (i=1; i<6; i++){             //加循环
+     if($("#a"+i).offset().top<=wst){ //判断滚动条位置
+      $('#nav a').removeClass("c"); //清除c类
+      $("#a"+i+i).addClass("c");	//给当前导航加c类
+      }
+    }
+    
+})
+$('#nav a').click(function(){
+$('#nav a').removeClass("c");
+$(this).addClass("c");
+});
+});
+</script>
+  </body>
+</html>
