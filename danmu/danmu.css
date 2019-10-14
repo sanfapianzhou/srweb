@@ -1,0 +1,20 @@
+.qiang{
+    background:transparent ;
+    width: 500px;
+    height: 400px;
+    margin: 300px auto 0px;
+    border: 3px solid black;
+}
+.qiang-xia{
+    height: 60px;
+    width: 500px;
+    margin: 0 auto;
+    background: blue;
+    border: 1px solid black;
+}
+#message{
+    margin: 15px 0px 15px 100px;
+}
+.dancang{
+display: flex;
+}
