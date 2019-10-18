@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巴士底狱景区</title>
+ <link  rel="stylesheet" href="/wfwz/style.css">
+ <link rel="stylesheet" href="/wfwz/normalize.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head> 
+<div class="bg"></div>
+   <nav class="header">
+       <p class="header-left"> <i class="fa fa-cog"></i> 商业地图</p>
+       <p class="header-right">
+           <span id="cometime"></span>
+           <span>27摄氏度</span>
+       </p>
+   <h3 class="text-center maxtitle">巴士底狱景区</h3>
+</nav>
+<section class="left-kuang animated bounceInleft">
+    <div class="title">
+        <div class="title-left">当日实训信息</div>
+        <br>
+        <ul class="ul-gun" >
+            <li><a href="#智能停车">智能停车</a> </li>
+            <li> <a href="#人流采集">人流采集</a> </li>
+            <li> <a href="#环境监测">环境监测</a> </li>
+            <li><a href="#智慧安保">智慧安保</a> </li>
+        </ul>
+    </div>
+    <div id="box" class="echars-tingche" style="margin-top: 0px;position:relative;">
+     <ul id="listt1"> 
+         <li><div  class="list-shixun ">
+            <div class="list-shixun-left"></div>
+                <div class="list-shixun-center">
+                    <p>12号停车厂车位紧张</br>
+                    13:56:25</p>
+                </div>
+                <div class="list-shixun-right">
+                    <button type="button" class="btn-success shixun">正常</button>
+                    <button type="button" class="btn-dancger shixun">异常</button>
+                </div>
+            </div></li>
+           <li> <div class="list-shixun">
+                    <div  class="list-shixun-left"></div>
+                        <div class="list-shixun-center">
+                            <p>6号停车厂车位紧张</br>
+                            13:56:25</p>
+                        </div>
+                        <div class="list-shixun-right">
+                            <button type="button" class="btn-success shixun">正常</button>
+                            <button type="button" class="btn-dancger shixun">异常</button>
+                        </div>
+                    </div></li>
+                   <li> <div class="list-shixun">
+                            <div class="list-shixun-left"></div>
+                                <div class="list-shixun-center">
+                                    <p>15号停车厂车位紧张</br>
+                                    13:56:25</p>
+                                </div>
+                                <div class="list-shixun-right">
+                                    <button type="button" class="btn-success shixun">正常</button>
+                                    <button type="button" class="btn-dancger shixun">异常</button>
+                                </div>
+                            </div></li>  
+                            <li><div class="list-shixun">
+                                    <div class="list-shixun-left"></div>
+                                        <div class="list-shixun-center">
+                                            <p>18号停车厂车位紧张</br>
+                                            13:56:25</p>
+                                        </div>
+                                        <div class="list-shixun-right">
+                                            <button type="button" class="btn-success shixun">正常</button>
+                                            <button type="button" class="btn-dancger shixun">异常</button>
+                                        </div>
+                                    </div>
+                                </li>  
+    </ul> 
+    <ul id="listt2"> </ul>                                                    
+    </div>
+    <div class="daohang">
+        <div class="title">
+            <div class="title-left">地图导航定位</div>
+            <div class="daohangtu-container">
+                <img src="/wfwz/image/daohang.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="right-kuang animated bounceInRight">
+  <div class="kuang1">
+    <div class="title">
+        <div class="title-left">实时人流</div>
+    </div>
+    <div class="echars-renliu" id="echars-renliu"></div>  
+  </div>
+  <div class="kuang1">
+    <div class="title">
+        <div class="title-left">空气检测</div>    
+    </div>
+    <div class="echars-kongqi"id="echars-kongqi">
+        <div>
+            <i class="fa fa-paper-plane-o kongqires2"aria-hidden="true"></i>
+            <p class="kongqires animated rotateIn" id="kongqi1">7</p>
+            <p class="kongqires1">空气指数</p>
+        </div>
+             <div>
+                <i class="fa fa-balance-scale kongqires2 " aria-hidden="true"></i>
+                <p class="kongqires animated" id="kongqi2">0</p>
+                <p class="kongqires1">水质PH</p>
+            </div> 
+            <div>
+                <i class="fa fa-volume-control-phone kongqires2 " aria-hidden="true"></i>
+                <p class="kongqires  animated rotateIn"  id="kongqi3">76</p>
+                <p class="kongqires1">噪音分贝</p>
+            </div>
+    </div>
+</div>
+<div class="kuang1">
+    <div class="title">
+        <div class="title-left">智能停车</div>
+    </div>
+    <div class="echars-tingche" id="echars-tingche"></div>
+  </div>
+<div class="kuang1"></div>
+<div class="title">
+    <div class="title-left">安保信息</div>
+</div>
+<div id="box1" class="echars-anbao" style="margin-top: 0px;position:relative;">
+    <ul id="listt3"> 
+        <li><div  class="list-shixun">
+           <div class="list-shixun-left"></div>
+               <div class="list-shixun-center">
+                   <p>安保1队巡逻中</br>
+                   13:56:25</p>
+               </div>
+               <div class="list-shixun-right">
+                   <button type="button" class="btn-success shixun">正常</button>
+               </div>
+           </div></li>
+          <li> <div class="list-shixun">
+                   <div  class="list-shixun-left"></div>
+                       <div class="list-shixun-center">
+                           <p>1号区域发生偷窃</br>
+                           13:56:25</p>
+                       </div>
+                       <div class="list-shixun-right">
+                           <button type="button" class="btn-dancger shixun">异常</button>
+                       </div>
+                   </div></li>
+                  <li> <div class="list-shixun">
+                           <div class="list-shixun-left"></div>
+                               <div class="list-shixun-center">
+                                   <p>3号区域发生车祸</br>
+                                   13:56:25</p>
+                               </div>
+                               <div class="list-shixun-right">
+                                   <button type="button" class="btn-dancger shixun">异常</button>
+                               </div>
+                           </div></li>  
+                           <li><div class="list-shixun">
+                                   <div class="list-shixun-left"></div>
+                                       <div class="list-shixun-center">
+                                           <p>18号区域正在抓捕犯人</br>
+                                           13:56:25</p>
+                                       </div>
+                                       <div class="list-shixun-right">
+                                           <button type="button" class="btn-success shixun">正常</button>
+                                       </div>
+                                   </div></li>  
+                             </ul>
+            <ul id="listt4"> </ul>
+      </div>
+     </div>
+                            
+ </div>
+</section>
+
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/wfwz/index.js"></script>
+</body>
+</html>

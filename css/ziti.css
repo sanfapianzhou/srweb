@@ -1,0 +1,35 @@
+
+   a:link{color: #ff0000;
+background-color: yellow}
+ a:visited{color: #00ff00;
+background-color: teal}
+ a:hover{color: #ff00ff;
+background-color:black}
+a:active{color:#0000ff;
+background-color: violet}
+@keyframes spinner-line-fade-more {
+   0%, 100% {
+     opacity: 0; /* minimum opacity */
+   }
+   1% {
+     opacity: 1;
+   }
+ }
+ 
+ @keyframes spinner-line-fade-quick {
+   0%, 39%, 100% {
+     opacity: 0.25; /* minimum opacity */
+   }
+   40% {
+     opacity: 1;
+   }
+ }
+ 
+ @keyframes spinner-line-fade-default {
+   0%, 100% {
+     opacity: 0.22; /* minimum opacity */
+   }
+   1% {
+     opacity: 1;
+   }
+ }

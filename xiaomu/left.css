@@ -1,0 +1,64 @@
+@keyframes spinner-line-fade-more {
+    0%, 100% {
+      opacity: 0; /* minimum opacity */
+    }
+    1% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spinner-line-fade-quick {
+    0%, 39%, 100% {
+      opacity: 0.25; /* minimum opacity */
+    }
+    40% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spinner-line-fade-default {
+    0%, 100% {
+      opacity: 0.22; /* minimum opacity */
+    }
+    1% {
+      opacity: 1;
+    }
+  }
+.box{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    left: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: yellow;
+    border: 8px solid #00f;
+    -webkit-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+ 
+}
+.box:before{
+    content: "";
+    position: absolute ;
+    left: -48px;
+    top: 40px;
+     width: 0;
+    height: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color:transparent #00f transparent transparent;
+    background: #fff;
+}
+
+.box:after{
+    content: "";
+    position: absolute ;
+  left: -40px;
+  top: 40px;
+    width: 0;
+    height: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color:transparent yellow transparent transparent;
+}

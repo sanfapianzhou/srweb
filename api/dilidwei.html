@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">dianjihuoquzuobiao</p>
+    <button onclick="getlocation()">shiyixia</button>
+<script>
+var x=document.getElementById("demo");
+function getlocation()
+{
+    if (navigator.geolocation)
+    {
+        navigator.geolocation.watchPosition(showposition,showError);  
+    }
+    else{x.innerHTML="geolocation is not supported by this brower."}
+}
+function showposition(position)
+{
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+  "<br />Longitude: " + position.coords.longitude;	
+}
+function showError(error)
+{
+    switch(error.code)
+    {
+        case error.permission_denied:x.innerHTML="user denied the request for geolocation."
+        break;
+        case error.position_unavailable:x.innerHTML="location information is unavailable."
+        break;
+        case error.unknown_error:
+            x.innerHTML="an unknown error occurred."
+            break;
+
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+      
+     <script>
+        var hannoi = function (n,you,huan1,zhong){
+            if(n > 0){
+                hannoi(n - 1,you,zhong,huan1);
+                document.writeln('Move yuan ' + you 
+                +' from ' + you +' to ' + zhong );
+            hannoi(n - 1, huan1, you, zhong);
+            }
+        }
+        hannoi(3, 'you', 'huan1', 'zhong');
+
+       var fibonacci = function (n) {
+           return n< 2? n : fibonacci(n-1) + fibonacci(n-2);
+       };
+       for (var i = 0; i<= 10; i += 1) {
+           document.writeln('//' + i +':' + fibonacci(i));
+       }
+        </script>
+</body>
+</html>

@@ -54,12 +54,12 @@
           </div>
           <br /><br />
           页面结构如下：
-          <div id="a1"><div style="height:500px ">ceshi</div></div>
+          <div id="a1"><div style="height:500px ">ceshi</div>
+        <div> maopao([152,48,5,6,358,268,26516,,568,68,765])</div></div>
           <div id="a2"><div style="height:500px ">ceshi</div></div>
           <div id="a3"><div style="height:500px ">ceshi</div></div>
           <div id="a4"><div style="height:500px ">ceshi</div></div>
           <div id="a5"><div style="height:500px ">ceshi</div></div>
-
 
     <!-- Footer
 ================================================== -->
@@ -69,44 +69,22 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script>
-$(function(){
-var toTopHeight = $("#nav").offset().top;
-$(window).scroll(function() {
-if( $(document).scrollTop() > toTopHeight ){
-if ('undefined' == typeof(document.body.style.maxHeight)) {
-var scrollTop = $(document).scrollTop();
-$("#nav").css({'position':'absolute','top':scrollTop+'px'});
-}else{
-$("#nav").addClass("nav_fixed");
-}
-}else{
-if ('undefined' == typeof(document.body.style.maxHeight)) {
-$("#nav").css({'position':'absolute','top':toTopHeight+'px'});
-}else{
-$("#nav").removeClass("nav_fixed");
-}
-}
-});
 
-});
-$(function(){
-	
-  $(window).scroll(function(){
-  //为页面添加页面滚动监听事件
-             var wst =  $(window).scrollTop() //滚动条距离顶端值
-    for (i=1; i<6; i++){             //加循环
-     if($("#a"+i).offset().top<=wst){ //判断滚动条位置
-      $('#nav a').removeClass("c"); //清除c类
-      $("#a"+i+i).addClass("c");	//给当前导航加c类
-      }
-    }
-    
-})
-$('#nav a').click(function(){
-$('#nav a').removeClass("c");
-$(this).addClass("c");
-});
-});
+ function maopao(arr){
+  for (i=0;i<arr.length;i++){
+  for (j=0;j<arr.length;j++){
+   if(arr[j] < arr[j+1]) {
+     b = arr[j];
+     arr[j] =arr[j+1];
+     arr[j+1] = b;
+   }
+  }
+  }
+   return arr;
+ }
+
+ maopao([152,48,5,6,358,268,26516,568,68,765]);
+ console.log(13)
 </script>
   </body>
 </html>
