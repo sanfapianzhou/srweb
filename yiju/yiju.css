@@ -1,0 +1,38 @@
+#yanse{
+    background-color: blue;
+}
+.a{
+    position: absolute;
+    background-color: transparent;
+    width: 1000px;
+    height: 400px;
+    text-align: center; 
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#b{ 
+    text-align: center; 
+    /* 文字从右往左竖直排列 */
+    writing-mode: vertical-rl;
+    background-color: transparent;
+    /* width: 1000px; */
+    margin:50px auto;
+    height: 300px;
+    /* direction:   rtl;文字从右往左输入
+    unicode-bidi: bidi-override;  */
+    color: #fff000;
+}
+#c{
+    font-size: 30px;
+}
+#d{
+    font-size: 15px;
+}
+button{
+    background-color: transparent;
+    border: 0px;
+    font-size: 30px;
+}

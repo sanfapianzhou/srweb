@@ -30,6 +30,7 @@
             div.style.top = (this.domHeight - 20) * +Math.random().toFixed(2) + 'px';
             //div.style.whiteSpace = 'nowrap';
             div.style.color = getRandomColor;
+            console.log( getRandomColor)
             div.innerText = text;
             this.dom.appendChild(div);
   
