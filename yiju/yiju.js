@@ -5,9 +5,17 @@ var   zuozhe ="";
 var getQuote = function(){
 $.getJSON("https://api.gushi.ci/all.json",function(json){
     var rdg = ".erg.reg。违规，外观,glyphicon-warning-sign/erg";
-   shi = json["content"].replace(/，/g,"，<br>   ");
+   //shi = json["content"].replace(/，/g,"，<br>   ");
    chuzi ="——" + "《"+ json["origin"] + "》";  
     zuozhe =  json["author"];
+    shi = function duanl(){
+      var shi = json["content"].replace(/，/g,"，<br>   ");
+          shi  = shi.replace(/。/g,"。<br>   ");
+          shi = shi.replace(/、/g,"、<br>   ");
+          shi =  shi.replace(/；/g,"；<br>   ");
+          shi =  shi.replace(/？/g,"？<br>   ");
+      $("#c").html(shi);
+      }
 $("#c").html(shi);
 $("#d").html(chuzi);
 $("#e").html(zuozhe);
@@ -26,7 +34,6 @@ getQuote();
      // 颜色动画切换
     $('#yanse').animate({backgroundColor:'#' +bgys},1000);
     $('#b').animate({color:'#' +fanse() },1000);
-    $('#taosha').animate({color:'#' +fanse() },1000);
     $('button').animate({color:'#' +fanse() },1000);
    //document.getElementById('yanse').style.backgroundColor ="#" +  bgys; 
    //document.getElementById('b').style.color ="#" + fanse();//getElementsByClassName返回大是数组，要用【n】形式
