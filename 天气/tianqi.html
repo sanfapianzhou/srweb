@@ -1,0 +1,51 @@
+<!-- 输入城市名，传入api参数；标题为城市名；滚动条隐藏的天气栏；（6个数组数据，） -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天气</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./tianqi.css">
+</head>
+<body >
+      <div class="sosu">
+          <input type="text" id="sous" placeholder="城市名" >
+          <button  onclick="sousuo()"><i class="glyphicon glyphicon-search" ></i></button>
+      </div>
+              <div  id="jinr"> 
+                  <div id="chengs"></div>
+                  <div id="drqw" > 
+                     <sup><img id="#drqw-tp" src=""></sup> 
+                      <span id="drqw-wd" ></span>
+                      <SUP>℃</SUP>
+                    </div>
+                  <div id="drtq"></div>
+                  <div id="zhuy">
+                    PM2.5指数  <span id="kqzhl" style="width: 20px"></span> <br/>
+                      <span id="xzfx"  style="width: 60px"></span>
+                            <span id="xzfs" ></span>
+                      湿度  <span id="xzsd"></span>
+                  </div>
+              </div>
+                   <div id="gundong">
+                       <div class="yester"></div>
+                       <div class="today"></div>
+                       <div class="torrow"></div>
+                       <div class="disit"></div>
+                       <div class="diwut"></div>
+                       <div class="diliut"></div>
+                   </div>
+            
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>   
+   <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="./tianqi.js"></script> <!-- 加载jq的背景颜色动画插件 -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  
+       
+</body>
+</html>

@@ -4,7 +4,6 @@ var  chuzi ="";
 var   zuozhe ="";
 var getQuote = function(){
 $.getJSON("https://api.gushi.ci/all.json",function(json){
-    var rdg = ".erg.reg。违规，外观,glyphicon-warning-sign/erg";
    //shi = json["content"].replace(/，/g,"，<br>   ");
    chuzi ="——" + "《"+ json["origin"] + "》";  
     zuozhe =  json["author"];
